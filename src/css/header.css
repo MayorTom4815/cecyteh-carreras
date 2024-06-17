@@ -24,7 +24,7 @@ header {
             color: var(--thirty);
             width: 60%;
 
-            margin: 4vh auto;
+            margin: 2vh auto;
             padding: 2vh;
 
             text-decoration: none;
@@ -70,8 +70,7 @@ header {
 }
 
 @media (max-width:550px) {
-    header .textos {
-        backdrop-filter: blur(0px);
+    header .h-textos {
         margin: 5vh auto;
         width: 100%;
     }

@@ -20,7 +20,7 @@ footer{
     }
 
     .social{
-        background: var(--thirty);
+        background: var(--primary);
         flex-flow: row wrap;
         display: flex;
         width: 95%;
@@ -33,7 +33,7 @@ footer{
         margin: 0vw auto;
 
         & a{
-            color: var(--second);
+            color: var(--font);
             border-radius: 10px;
             padding: 1vh 1vw;
             margin: 0vh 0.2vw;
@@ -42,7 +42,7 @@ footer{
                 background 0.5s;
 
             &:hover{
-                background: var(--second);
+                background: var(--thirty);
                 color: var(--font);
             }
         }
@@ -54,7 +54,7 @@ footer{
     }
 
     & iframe{
-        background: var(--thirty);
+        background: var(--primary);
         border-radius: 20px;
         width: 100%;
 

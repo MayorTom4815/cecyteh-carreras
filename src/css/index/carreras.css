@@ -1,11 +1,11 @@
-.carreras .title{
+.carreras .title {
     border-radius: 20px 20px 0px 0px;
     background: var(--primary);
     padding: 2vh 0vw;
     margin: 0;
 }
 
-.carreras div{
+.carreras .main-carreras {
     background: var(--primary);
     justify-content: center;
     align-items: center;
@@ -15,36 +15,43 @@
     padding: 5vh 5vw;
 }
 
-.carreras article{
+.carreras article {
     flex-flow: row nowrap;
     display: flex;
 
     justify-content: center;
     align-items: center;
     text-align: center;
-    
-    & div{
-        text-wrap : pretty;
+
+    & div {
+        text-wrap: pretty;
         padding: 1vh 1vw;
         margin: 1vh 1vw;
         width: 80%;
 
-        & img{width: 100%;}
-    
+        transition: all 1s;
+        
+        & img {width: 100%;}
+        
         &:has(a:hover){
-            color: var(--color-second);
-            background: var(--color-thirty);
-
-            & img{
-                background-color: var(--color-primary);
+            & {
+                background: var(--thirty);
                 border-radius: 10px;
+                color: var(--primary);
+
+                & img{
+                    background: var(--primary);
+                    border-radius: 20px;
+                }
             }
         }
+
+
     }
 }
 
-@media (max-width: 550px){
-    .carreras article{
+@media (max-width: 550px) {
+    .carreras article {
         flex-flow: column wrap;
     }
 }
