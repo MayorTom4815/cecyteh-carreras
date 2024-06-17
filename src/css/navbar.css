@@ -1,0 +1,103 @@
+nav {
+    background: var(--second);
+    justify-content: space-between;
+    flex-flow: row wrap;
+    display: flex;
+
+    border-radius: 0px 0px 50px 50px;
+    align-items: center;
+    padding: 2vh 10vw;
+    position: fixed;
+
+    box-shadow: 0px 0px 50px black;
+    z-index: 2;
+    width: 90%;
+    left: 5%;
+
+    animation: appear-nav 0.5s ease-in;
+
+    & img {
+        width: 120px;
+    }
+
+    &:has(button:focus) {
+        & menu {
+            animation: appear-menu 0.5s ease-in;
+            display: flex;
+        }
+    }
+}
+
+
+nav button {
+    color: var(--font);
+    border-radius: 10px;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    transition: all 0.5s ease-in;
+    padding: 0.5vh 0.5vw;
+    z-index: 3;
+
+    &:focus {
+        background: var(--thirty);
+        rotate: 90deg;
+    }
+}
+
+nav menu {
+    background: var(--second);
+    flex-flow: column nowrap;
+    position: fixed;
+    display: none;
+
+    border-radius: 20px 0px 0px 20px;
+    text-align: center;
+    padding: 10vh 2vw;
+
+    box-shadow: 0px 0px 20px black;
+    z-index: 1;
+    right: 0%;
+    top: 35%;
+
+    & a {
+        padding: 0.5vh 0.5vw;
+        font-weight: normal;
+        border-radius: 5px;
+        font-size: 1.2rem;
+
+        transition: all 0.5s ease-in;
+        color: var(--color-font);
+        text-decoration: none;
+
+        &:hover {
+            background: var(--thirty);
+            color: var(--second);
+            font-weight: bold;
+        }
+    }
+}
+
+@keyframes appear-nav {
+    from {
+        translate: 0px -100px;
+    }
+
+    to {
+        translate: 0px 0px;
+    }
+}
+
+@keyframes appear-menu {
+    from {
+        translate: 100px 0px;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0px 0px;
+        opacity: 1;
+    }
+}

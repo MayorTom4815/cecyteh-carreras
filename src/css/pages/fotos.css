@@ -1,0 +1,33 @@
+.fotos .fotos-imagen{
+    flex-flow: row nowrap;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    & img{
+        border-radius: 10px;
+        aspect-ratio:  16/9;
+        margin: 0vh 1vw;
+        width: 30vw;
+
+        box-shadow: 0px 0px 20px black;
+    }
+}
+
+@media (max-width: 550px) {
+    .fotos .fotos-imagen {
+        flex-flow: column nowrap;
+        margin: 2vh 2vw;
+
+        & img{
+            margin: 5vh 0vw;
+            width: 250px;
+
+            &.can-hide{
+                display: none;
+            }
+        }
+    }
+}

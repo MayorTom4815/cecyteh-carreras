@@ -1,0 +1,35 @@
+.galeria .title{
+    background: var(--primary);
+    padding: 2vh 2vw; 
+
+    border-radius: 20px 20px 0px 0px;
+    margin: 0;
+}
+
+.galeria div{
+    grid-template-columns: 1fr 1fr 1fr;
+
+    background: var(--primary);
+    display: grid;
+
+    border-radius: 0px 0px 10px 10px;
+    padding: 2vh 2vw;
+
+    & img{
+        aspect-ratio: 16/9;
+        opacity: 0.50;
+        width: 100%;
+
+        transition: all 0.5s ease-in-out;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 550px){
+    .galeria div{
+        grid-template-columns: 1fr;
+    }
+}

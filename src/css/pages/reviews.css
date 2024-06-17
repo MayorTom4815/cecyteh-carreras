@@ -1,0 +1,32 @@
+.reviews .rv-main{
+    display: flex;
+    flex-flow: column wrap;
+
+    .review{
+        justify-content: center;
+        flex-flow: row nowrap;
+        align-items: center;
+        display: flex;
+
+        text-justify: distribute;
+        text-align: justify;
+
+        & img{
+            border-radius: 100px;
+            aspect-ratio: 1;
+            width: 150px;
+
+            margin: 0vh 1vw;
+        }
+
+        .name{padding: 1vh;}
+        .name.right{text-align: right;}
+        
+    }
+}
+
+@media (max-width: 320px) {
+    .reviews .rv-main .review img{
+        width: 30vw;
+    }
+}

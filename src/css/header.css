@@ -1,0 +1,88 @@
+header {
+    align-items: center;
+    display: flex;
+
+    box-shadow: 0px 0px 100px black;
+    border-radius: 0px 0px 50px 50px;
+
+    & .h-textos {
+        flex-flow: column wrap;
+        padding: 10vh 10vw;
+        display: flex;
+
+        backdrop-filter: blur(50px);
+        text-align: center;
+        margin: 25vh auto;
+
+        animation: appear 0.5s ease-in;
+        border-radius: 20px;
+        width: 90%;
+
+        & a {
+            border: 2px solid var(--thirty);
+            border-radius: 25px;
+            color: var(--thirty);
+            width: 60%;
+
+            margin: 4vh auto;
+            padding: 2vh;
+
+            text-decoration: none;
+
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+                background: var(--thirty);
+                color: var(--font);
+            }
+        }
+    }
+}
+
+header {
+    &.index {
+        background: fixed url("../img/cecyte/header.png") center/cover no-repeat;
+    }
+
+    &.enfermeria {
+        background: fixed url("../img/enfermeria/header.png") center/cover no-repeat;
+    }
+
+    &.produccionIn {
+        background: fixed url("../img/prodInd/bg.png") center/cover no-repeat;
+    }
+
+    &.soporte {
+        background: fixed url("../img/soporteComp/bg.jpg") center/cover no-repeat;
+    }
+
+    &.procesos {
+        background: fixed url("../img/prosesosGest/bg.png") center/cover no-repeat;
+    }
+
+    &.programacion {
+        background: fixed url("../img/programacion/bg.jpg") no-repeat center/cover;
+    }
+
+    &.textil{
+        background: fixed url("../img/manufactura/bg.jpg") no-repeat center/cover;
+    }
+}
+
+@media (max-width:550px) {
+    header .textos {
+        backdrop-filter: blur(0px);
+        margin: 5vh auto;
+        width: 100%;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

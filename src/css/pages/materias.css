@@ -1,0 +1,63 @@
+.materias .materia-main{
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: center;
+    text-align: justify;
+
+    .materia{
+        border: 2px dotted var(--thirty);
+        margin: 0.5vw;
+        width: 50%;
+        padding: 2vw;
+        
+        border-radius: 5px;
+
+        & h5{
+            border-bottom: 2px solid var(--thirty);
+            margin: 1vh 0vw;
+            padding: 1vh;
+        }
+        
+        & ul{
+            padding: 0vh 1.5vw;
+            
+            & li{
+                padding: 1vh 0vw;
+            }
+        }
+    }
+}
+
+.materias .prope-info{
+    background: var(--primary);
+    border-radius: 10px;
+    padding: 5vh 5vw;
+    margin: 5vh 0vw;
+
+    text-align: center;
+
+    & a{
+        margin: 5vh 0vw;
+        color: var(--font);
+        
+        &:hover{
+            color: var(--thirty);
+        }
+    }
+}
+
+@media (max-width: 750px){
+    .materias .materia-main{
+        flex-flow: column wrap;
+
+        .materia{
+            width: 90%;
+            margin: 1vh auto;
+
+            & ul{
+                list-style: none;
+            }
+        }
+    }
+}

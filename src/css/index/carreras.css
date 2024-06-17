@@ -1,0 +1,50 @@
+.carreras .title{
+    border-radius: 20px 20px 0px 0px;
+    background: var(--primary);
+    padding: 2vh 0vw;
+    margin: 0;
+}
+
+.carreras div{
+    background: var(--primary);
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0px 0px 20px 20px;
+    overflow: hidden;
+    padding: 5vh 5vw;
+}
+
+.carreras article{
+    flex-flow: row nowrap;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    & div{
+        text-wrap : pretty;
+        padding: 1vh 1vw;
+        margin: 1vh 1vw;
+        width: 80%;
+
+        & img{width: 100%;}
+    
+        &:has(a:hover){
+            color: var(--color-second);
+            background: var(--color-thirty);
+
+            & img{
+                background-color: var(--color-primary);
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px){
+    .carreras article{
+        flex-flow: column wrap;
+    }
+}

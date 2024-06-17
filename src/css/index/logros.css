@@ -1,0 +1,43 @@
+.logros div{
+    text-align: justify;
+    text-justify: newspaper;
+
+    margin: 0vh auto;
+    width: 90%;
+}
+
+.logros .letter{
+    font-family: "Dancing Script", cursive;
+    background: var(--font);
+    color: black;
+    width: 80%;
+    
+    rotate: -5deg;
+    border-radius: 5px;
+    padding: 5vh 5vw;
+    margin: 5vh auto;
+
+    & .author{text-align: right;}
+
+    & img{
+        position: relative;
+        aspect-ratio: 16/9;
+        width: 30vw;
+
+        border-radius: 5px;
+        rotate: 5deg;
+    }
+}
+
+@media (max-width: 550px){
+    .logros div{width: 100%;}
+
+    .logros .letter{
+        width: 100%;
+        rotate: 0deg;
+
+        & img{
+            rotate: 0deg;
+        }
+    }
+}
